@@ -35,8 +35,8 @@ header a{
     position: relative;
 }
 .card{
-    width:120%;
-    max-width: 460px;
+    width:90%;
+    max-width: 260px;
     
     color: #fff;
     text-align: center;
@@ -746,7 +746,8 @@ header a{
 }
 
 /* arrows */
-.arrows{
+/* arrows */
+.arrows {
     position: absolute;
     top: 80%;
     right: 20%;
@@ -757,21 +758,44 @@ header a{
     gap: 10px;
     align-items: center;
 }
-.arrows button{
+
+.arrows button {
     width: 80px;
     height: 80px;
-    border-radius: 80%;
-    background-color: #eee4;
+    border-radius: 50%;
+    background-color: #eee;
     border: none;
     color: #fff;
     font-family: monospace;
     font-weight: bold;
     transition: .5s;
 }
-.arrows button:hover{
+
+.arrows button:hover {
     background-color: #fff;
     color: #000;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .arrows {
+        top: auto;
+        bottom: 20px;
+        right: 50%;
+        transform: translateX(50%);
+        width: 90%;
+        max-width: 400px;
+        padding: 0 10px;
+        justify-content: space-between;
+    }
+
+    .arrows button {
+        width: 60px;
+        height: 60px;
+        font-size: 0.8rem;
+    }
+}
+
 
 /* animation */
 .carousel .list .item:nth-child(1){
